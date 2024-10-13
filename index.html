@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvíz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kvíz</h1>
+
+    <form id="quizForm">
+        <div class="question">
+            <label>Milyen stílusban épült a Hősök kapuja?</label><br>
+            <input type="radio" name="q1" value="Barokk"> Barokk<br>
+            <input type="radio" name="q1" value="Neoklasszicista"> Neoklasszicista<br>
+            <input type="radio" name="q1" value="Romantikus"> Romantikus<br>
+        </div>
+
+        <div class="question">
+            <label>Milyen névvel illetik József Attila asszociációs naplóját?</label><br>
+            <input type="radio" name="q2" value="Szabad-ötletek jegyzéke"> Szabad-ötletek jegyzéke<br>
+            <input type="radio" name="q2" value="Kölcsey naplója"> Kölcsey naplója<br>
+            <input type="radio" name="q2" value="Az élet írásai"> Az élet írásai<br>
+        </div>
+
+        <div class="question">
+            <label>Ki volt Mercedes, Janikovszky Éva kedvenc munkatársa?</label><br>
+            <input type="radio" name="q3" value="írógép"> írógép<br>
+            <input type="radio" name="q3" value="freskó"> freskó<br>
+            <input type="radio" name="q3" value="fiók"> fiók<br>
+        </div>
+
+        <div class="question">
+            <label>Kitől származik az idézet? „Huszonkét esztelen, félmeztelen egyén, egymás hátán-hegyén nyüzsög lenn a pályán...”</label><br>
+            <input type="radio" name="q4" value="Petőfi Sándor"> Petőfi Sándor<br>
+            <input type="radio" name="q4" value="Vörösmarty Mihály"> Vörösmarty Mihály<br>
+            <input type="radio" name="q4" value="Romhányi József"> Romhányi József<br>
+        </div>
+
+        <div class="question">
+            <label>Mi volt Tanner Ilona álneve?</label><br>
+            <input type="radio" name="q5" value="Kaffka Margit"> Kaffka Margit<br>
+            <input type="radio" name="q5" value="Török Sophie"> Török Sophie<br>
+            <input type="radio" name="q5" value="Szabó Magda"> Szabó Magda<br>
+        </div>
+
+        <div class="question">
+            <label>Milyen a verselése a Szózatnak?</label><br>
+            <input type="radio" name="q6" value="szabadvers"> szabadvers<br>
+            <input type="radio" name="q6" value="időmértékes"> időmértékes<br>
+            <input type="radio" name="q6" value="rímelő"> rímelő<br>
+        </div>
+
+        <div class="question">
+            <label>Ki zenésítette meg?</label><br>
+            <input type="radio" name="q7" value="Bartók Béla"> Bartók Béla<br>
+            <input type="radio" name="q7" value="Kodály Zoltán"> Kodály Zoltán<br>
+            <input type="radio" name="q7" value="Egressy Béni"> Egressy Béni<br>
+        </div>
+
+        <div class="question">
+            <label>Hol jelent meg a hazafias óda?</label><br>
+            <input type="radio" name="q8" value="Auróra"> Auróra<br>
+            <input type="radio" name="q8" value="Pesti Napló"> Pesti Napló<br>
+            <input type="radio" name="q8" value="Fővárosi Közlöny"> Fővárosi Közlöny<br>
+        </div>
+
+        <div class="question">
+            <label>Melyik honfoglalás eposzt emlegetik a nemzet ébresztőjeként?</label><br>
+            <input type="radio" name="q9" value="Zalán futása"> Zalán futása<br>
+            <input type="radio" name="q9" value="Tündér Ilona"> Tündér Ilona<br>
+            <input type="radio" name="q9" value="Képes Krónika"> Képes Krónika<br>
+        </div>
+
+        <div class="question">
+            <label>Mi volt Kölcsey Ferenc első, nyomtatásban megjelent műve?</label><br>
+            <input type="radio" name="q10" value="Buborék"> Buborék<br>
+            <input type="radio" name="q10" value="Fohász"> Fohász<br>
+            <input type="radio" name="q10" value="Szeptember végén"> Szeptember végén<br>
+        </div>
+
+        <div class="question">
+            <label>Kitől származik a következő idézet? „Nem palotakaput akarok építeni, hanem városkaput, amely lezárja a Gizella tér nyugtalanságát…”</label><br>
+            <input type="radio" name="q11" value="Klebelsberg Kuno"> Klebelsberg Kuno<br>
+            <input type="radio" name="q11" value="Radnóti Miklós"> Radnóti Miklós<br>
+            <input type="radio" name="q11" value="József Attila"> József Attila<br>
+        </div>
+
+        <div class="question">
+            <label>A freskókat ki festette?</label><br>
+            <input type="radio" name="q12" value="Lechner Ödön"> Lechner Ödön<br>
+            <input type="radio" name="q12" value="Lőte Éva"> Lőte Éva<br>
+            <input type="radio" name="q12" value="Aba-Novák Vilmos"> Aba-Novák Vilmos<br>
+        </div>
+
+        <div class="question">
+            <label>Ki tervezte a kaput?</label><br>
+            <input type="radio" name="q13" value="Ottovay István"> Ottovay István<br>
+            <input type="radio" name="q13" value="Hóman Bálint"> Hóman Bálint<br>
+            <input type="radio" name="q13" value="Melocco Miklós"> Melocco Miklós<br>
+        </div>
+
+        <div class="question">
+            <label>Melyik szentet ünneplik szeptember 29.-én, aki az angyalok vezetője?</label><br>
+            <input type="radio" name="q14" value="Szent Mihály"> Szent Mihály<br>
+            <input type="radio" name="q14" value="Szent István"> Szent István<br>
+            <input type="radio" name="q14" value="Szent László"> Szent László<br>
+        </div>
+
+        <div class="question">
+            <label>Melyik szent ünnepe van március 17.-én, aki Írország védőszentje?</label><br>
+            <input type="radio" name="q15" value="Szent Patrik"> Szent Patrik<br>
+            <input type="radio" name="q15" value="Szent Mihály"> Szent Mihály<br>
+            <input type="radio" name="q15" value="Szent László"> Szent László<br>
+        </div>
+
+        <div class="question">
+            <label>Mikor van a Magyarok Nagyasszonyának ünnepe?</label><br>
+            <input type="radio" name="q16" value="október 8."> október 8.<br>
+            <input type="radio" name="q16" value="november 1."> november 1.<br>
+            <input type="radio" name="q16" value="december 25."> december 25.<br>
+        </div>
+
+        <div class="question">
+            <label>Hány aradi vértanú volt összesen (október 6.-án kivégzettek)?</label><br>
+            <input type="radio" name="q17" value="12"> 12<br>
+            <input type="radio" name="q17" value="13"> 13<br>
+            <input type="radio" name="q17" value="14"> 14<br>
+        </div>
+
+        <div class="question">
+            <label>Melyik szent nem található meg a kapun?</label><br>
+            <input type="radio" name="q18" value="Szent Mihály"> Szent Mihály<br>
+            <input type="radio" name="q18" value="Szent Gábor"> Szent Gábor<br>
+            <input type="radio" name="q18" value="Szent János"> Szent János<br>
+        </div>
+
+        <div class="question">
+            <label>Hány katona látható a kapu pillérein?</label><br>
+            <input type="radio" name="q19" value="2"> 2<br>
+            <input type="radio" name="q19" value="3"> 3<br>
+            <input type="radio" name="q19" value="4"> 4<br>
+        </div>
+
+        <div class="question">
+            <label>Ki készítette a szobrokat?</label><br>
+            <input type="radio" name="q20" value="Lőte Éva"> Lőte Éva<br>
+            <input type="radio" name="q20" value="Kossuth Lajos"> Kossuth Lajos<br>
+            <input type="radio" name="q20" value="Klebelsberg Kuno"> Klebelsberg Kuno<br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Ellenőriz</button>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: "Neoklasszicista",
+                q2: "Szabad-ötletek jegyzéke",
+                q3: "írógép",
+                q4: "Romhányi József",
+                q5: "Török Sophie",
+                q6: "időmértékes",
+                q7: "Egressy Béni",
+                q8: "Auróra",
+                q9: "Zalán futása",
+                q10: "Buborék",
+                q11: "Klebelsberg Kuno",
+                q12: "Aba-Novák Vilmos",
+                q13: "Pogány Móric",
+                q14: "Szent Mihály",
+                q15: "Szent Patrik",
+                q16: "október 8.",
+                q17: "13",
+                q18: "Szent Mihály",
+                q19: "2",
+                q20: "Lőte Éva"
+            };
+
+            let score = 0;
+            let resultHtml = '';
+
+            for (let i = 1; i <= 20; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const userAnswer = selected ? selected.value : '';
+
+                if (userAnswer === answers[qName]) {
+                    score++;
+                    resultHtml += `<p class="correct">Kérdés ${i}: Helyes válasz! (${userAnswer})</p>`;
+                } else {
+                    resultHtml += `<p class="incorrect">Kérdés ${i}: Helytelen válasz! (${userAnswer} - helyes válasz: ${answers[qName]})</p>`;
+                }
+            }
+
+            resultHtml += `<p>Összpontszám: ${score} / 20</p>`;
+            document.getElementById('result').innerHTML = resultHtml;
+        }
+    </script>
+
+</body>
+</html>
