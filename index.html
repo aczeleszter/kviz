@@ -3,66 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hungarian Literature Quiz</title>
+    <title>Kvíz</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-        }
-        .quiz-container {
             margin: 20px;
         }
         .question {
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
-        .correct-answer {
-            display: none;
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .correct {
             color: green;
         }
-        .wrong-answer {
-            display: none;
+        .incorrect {
             color: red;
         }
     </style>
 </head>
 <body>
-    <div class="quiz-container">
+
+    <h1>Kvíz</h1>
+
+    <form id="quizForm">
         <div class="question">
-            <p>1. Milyen stílusban épült a Hősök kapuja?</p>
-            <input type="radio" id="q1a1" name="q1" value="neoklasszicista">
-            <label for="q1a1">Neoklasszicista</label><br>
-            <input type="radio" id="q1a2" name="q1" value="barokk">
-            <label for="q1a2">Barokk</label><br>
-            <input type="radio" id="q1a3" name="q1" value="román">
-            <label for="q1a3">Román</label><br>
-            <input type="radio" id="q1a4" name="q1" value="gotikus">
-            <label for="q1a4">Gótikus</label><br>
-            <span class="correct-answer">Helyes válasz: Neoklasszicista</span>
+            <label>Milyen stílusban épült a Hősök kapuja?</label><br>
+            <input type="radio" name="q1" value="Neoklasszicista"> Neoklasszicista<br>
+            <input type="radio" name="q1" value="Barokk"> Barokk<br>
+            <input type="radio" name="q1" value="Romantikus"> Romantikus<br>
+            <input type="radio" name="q1" value="Gótikus"> Gótikus<br>
         </div>
 
-        <!-- Add similar blocks for all other questions -->
+        <div class="question">
+            <label>Milyen névvel illetik József Attila asszociációs naplóját?</label><br>
+            <input type="radio" name="q2" value="Haza szívverése"> Haza szívverése<br>
+            <input type="radio" name="q2" value="Ötletek gyűjteménye"> Ötletek gyűjteménye<br>
+            <input type="radio" name="q2" value="Szabad-ötletek"> Szabad-ötletek<br>
+            <input type="radio" name="q2" value="Verses napló"> Verses napló<br>
+        </div>
 
-        <button onclick="checkAnswers()">Ellenőriz</button>
-    </div>
+        <div class="question">
+            <label>Kölcsey Ferencnek mi volt az első, nyomtatásban megjelent műve?</label><br>
+            <input type="radio" name="q3" value="Zalán futása"> Zalán futása<br>
+            <input type="radio" name="q3" value="Buborék"> Buborék<br>
+            <input type="radio" name="q3" value="Himnusz"> Himnusz<br>
+            <input type="radio" name="q3" value="Családi kör"> Családi kör<br>
+        </div>
+
+        <div class="question">
+            <label>A freskókat ki festette?</label><br>
+            <input type="radio" name="q4" value="Lechner Ödön"> Lechner Ödön<br>
+            <input type="radio" name="q4" value="Aba-Novák Vilmos"> Aba-Novák Vilmos<br>
+            <input type="radio" name="q4" value="Lőte Éva"> Lőte Éva<br>
+            <input type="radio" name="q4" value="Varga Imre"> Varga Imre<br>
+        </div>
+
+        <div class="question">
+            <label>Ki tervezte a kaput?</label><br>
+            <input type="radio" name="q5" value="Ottovay István"> Ottovay István<br>
+            <input type="radio" name="q5" value="Melocco Miklós"> Melocco Miklós<br>
+            <input type="radio" name="q5" value="Pogány Móric"> Pogány Móric<br>
+            <input type="radio" name="q5" value="Gábor Sára"> Gábor Sára<br>
+        </div>
+
+        <div class="question">
+            <label>Melyik szentet ünneplik szeptember 29.-én, aki az angyalok vezetője?</label><br>
+            <input type="radio" name="q6" value="Szent László"> Szent László<br>
+            <input type="radio" name="q6" value="Szent Mihály"> Szent Mihály<br>
+            <input type="radio" name="q6" value="Szent István"> Szent István<br>
+            <input type="radio" name="q6" value="Szent György"> Szent György<br>
+        </div>
+
+        <div class="question">
+            <label>Kitől származik a következő idézet? „Nem palotakaput akarok építeni, hanem városkaput, amely lezárja a Gizella tér nyugtalanságát… Kicsiny pénzzel, szűkös eszközökkel kell most szép dolgokat alkotni. Ezt a kaput úgy kell megcsinálni, hogy szimbóluma legyen a városnak, akár belülről az itthoniak, akár kívülről, a vasúton jövő idegenek számára…”</label><br>
+            <input type="radio" name="q7" value="Ady Endre"> Ady Endre<br>
+            <input type="radio" name="q7" value="Klebelsberg Kuno"> Klebelsberg Kuno<br>
+            <input type="radio" name="q7" value="Petőfi Sándor"> Petőfi Sándor<br>
+            <input type="radio" name="q7" value="Vörösmarty Mihály"> Vörösmarty Mihály<br>
+        </div>
+
+        <div class="question">
+            <label>Melyik szent nem található meg a kapun?</label><br>
+            <input type="radio" name="q8" value="Szent Borbála"> Szent Borbála<br>
+            <input type="radio" name="q8" value="Szent László"> Szent László<br>
+            <input type="radio" name="q8" value="Szent Erzsébet"> Szent Erzsébet<br>
+            <input type="radio" name="q8" value="Szent György"> Szent György<br>
+        </div>
+
+        <div class="question">
+            <label>Hány katona látható a kapu pillérein?</label><br>
+            <input type="radio" name="q9" value="2"> 2<br>
+            <input type="radio" name="q9" value="4"> 4<br>
+            <input type="radio" name="q9" value="6"> 6<br>
+            <input type="radio" name="q9" value="8"> 8<br>
+        </div>
+
+        <div class="question">
+            <label>Ki készítette a szobrokat?</label><br>
+            <input type="radio" name="q10" value="Szentpétery Mária"> Szentpétery Mária<br>
+            <input type="radio" name="q10" value="Kovács Margit"> Kovács Margit<br>
+            <input type="radio" name="q10" value="Lőte Éva"> Lőte Éva<br>
+            <input type="radio" name="q10" value="Varga Imre"> Varga Imre<br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Ellenőriz</button>
+    </form>
+
+    <div class="result" id="result"></div>
 
     <script>
         function checkAnswers() {
-            const questions = document.querySelectorAll('.question');
-            questions.forEach(question => {
-                const selected = question.querySelector('input[type="radio"]:checked');
-                const correctAnswer = question.querySelector('.correct-answer');
+            const correctAnswers = {
+                q1: "Neoklasszicista",
+                q2: "Szabad-ötletek",
+                q3: "Buborék",
+                q4: "Aba-Novák Vilmos",
+                q5: "Pogány Móric",
+                q6: "Szent Mihály",
+                q7: "Klebelsberg Kuno",
+                q8: "Szent Erzsébet",
+                q9: "2",
+                q10: "Lőte Éva"
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+            const resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = ''; // Clear previous results
+
+            for (const [key, value] of Object.entries(correctAnswers)) {
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
                 if (selected) {
-                    if (selected.value === correctAnswer.textContent.split(': ')[1]) {
-                        correctAnswer.style.display = 'block';
-                        correctAnswer.style.color = 'green';
+                    if (selected.value === value) {
+                        score++;
+                        resultContainer.innerHTML += `<p class="correct">Kérdés: ${key} - Helyes válasz: ${value}</p>`;
                     } else {
-                        correctAnswer.style.display = 'block';
-                        correctAnswer.style.color = 'red';
+                        resultContainer.innerHTML += `<p class="incorrect">Kérdés: ${key} - Rossz válasz: ${selected.value}. Helyes válasz: ${value}</p>`;
                     }
                 } else {
-                    correctAnswer.style.display = 'none';
+                    resultContainer.innerHTML += `<p class="incorrect">Kérdés: ${key} - Nem választottál választ. Helyes válasz: ${value}</p>`;
                 }
-            });
+            }
+
+            resultContainer.innerHTML += `<p>Összpontszám: ${score} / ${totalQuestions}</p>`;
         }
     </script>
+
 </body>
 </html>
